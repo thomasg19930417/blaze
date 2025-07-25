@@ -3,7 +3,7 @@ name: Build Centos7 Releases
 on:
   workflow_dispatch:
   push:
-    branches: ["master"]
+    branches: ["v5.0.0"]
 
 jobs:
   build-snapshot:
