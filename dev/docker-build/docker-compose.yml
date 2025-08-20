@@ -21,4 +21,4 @@ services:
       JAVA_VERSION: "${JAVA_VERSION}"
       SCALA_VERSION: "${SCALA_VERSION}"
       CELEBORN_VERSION: "${CELEBORN_VERSION}"
-    command: "bash -c 'source ~/.bashrc && cd /auron && ./build/mvn -T8 package -P${SHIM} -P${MODE} -Pceleborn-${CELEBORN_VERSION} -Pjdk-${JAVA_VERSION} -Pscala-${SCALA_VERSION}'"
+    command: "bash -c 'source ~/.bashrc && cd /auron && ./build/mvn -T8 package -Pceleborn-${CELEBORN_VERSION} -P${SHIM} -P${MODE}  -Pjdk-${JAVA_VERSION} -Pscala-${SCALA_VERSION}'"
