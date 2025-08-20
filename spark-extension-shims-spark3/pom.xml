@@ -17,14 +17,7 @@
       <groupId>org.apache.auron</groupId>
       <artifactId>spark-extension_${scalaVersion}</artifactId>
       <version>${project.version}</version>
-    </dependency>
-    
-    <dependency>
-      <groupId>org.apache.auron</groupId>
-      <artifactId>auron-celeborn_${scalaVersion}</artifactId>
-      <version>${project.version}</version>
-    </dependency>
-    
+    </dependency>    
     <dependency>
       <groupId>org.scala-lang</groupId>
       <artifactId>scala-library</artifactId>
