@@ -14,6 +14,7 @@ jobs:
         sparkver: [spark-3.0, spark-3.1, spark-3.2, spark-3.3, spark-3.4, spark-3.5]
         scalaver: [ 2.12, 2.13 ]
         auronver: [5.0.0]
+        celebornver: [0.5]
         exclude:
           # Only build on scala-2.13 for spark-3.5
           - sparkver: spark-3.0
@@ -59,7 +60,7 @@ jobs:
       - name: Build auron-${{ matrix.sparkver }}_${{ matrix.scalaver }}
         run: |
           sed -i 's/docker-compose -f/docker compose -f/g' ./release-docker.sh
-          SHIM=${{ matrix.sparkver }} MODE=release SCALA_VERSION=${{ matrix.scalaver }} ./release-docker.sh
+          SHIM=${{ matrix.sparkver }} MODE=release SCALA_VERSION=${{ matrix.scalaver }} CELEBORN_VERSION=${{ matrix.celebornver }} ./release-docker.sh
 
       - name: Upload auron-${{ matrix.sparkver }}_${{ matrix.scalaver }}
         uses: actions/upload-artifact@v4
